@@ -56,20 +56,27 @@ int main() {
     return 0;
 }
 
-// int main() {
-//     int input;
-//     scanf("%d", &input);
-//     int digitOne, digitTwo, digitThree, digitFour, digitFive;
-//     digitFour = input % 10;
-//     input /= 10;
-//     digitThree = input % 10;
-//     input /= 10;
-//     digitTwo = input % 10;
-//     input /= 10;
-//     digitOne = input % 10;
-//     input /= 10;
-//     digitFive = input % 10;
-//     int parityBit = digitFour ^ digitThree ^ digitTwo ^ digitOne;
-//     int isValid = parityBit ^ digitFive ^ 1;
-//     printf("%d\n", isValid);
-// }
+/* Alternative Solution */
+/*
+int main() {
+    int input;
+    scanf("%d", &input);
+
+    int digitOne, digitTwo, digitThree, digitFour, digitFive;
+
+    digitFour = input % 10;
+    input /= 10;
+    digitThree = input % 10;
+    input /= 10;
+    digitTwo = input % 10;
+    input /= 10;
+    digitOne = input % 10;
+    input /= 10;
+    digitFive = input % 10;
+
+    int parityBit = digitFour ^ digitThree ^ digitTwo ^ digitOne;
+    int isValid = parityBit ^ digitFive ^ 1;
+
+    printf("%d\n", isValid);
+}
+*/
