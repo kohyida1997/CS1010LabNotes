@@ -1,4 +1,3 @@
-
 zero:
 	gcc -o zero.o DivideByZero.c -Wall
 
