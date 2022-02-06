@@ -6,7 +6,7 @@ int main() {
     
         Context:
             - When we receive messages, they are in binary format
-            - The first 4 bits are actual data.
+            - The first 4 bits are actual data. 00011
             - The last bit is a parity bit
             - There are rules that dictate what the parity bit should be
             - We want to check if the message received follows these rules
@@ -32,11 +32,12 @@ int main() {
  
     int digitOne, digitTwo, digitThree, digitFour, givenParityBit;
 
-    givenParityBit = input % 10;
-    input /= 10;
+    // 00011
+    givenParityBit = input % 10; // extracted 1 at the end
+    input = input / 10; // 0001
 
-    digitFour = input % 10;
-    input /= 10;
+    digitFour = input % 10; // extracted 2nd last 1 from the end
+    input /= 10; // 000 
 
     digitThree = input % 10;
     input /= 10;
@@ -51,6 +52,8 @@ int main() {
 
     int parityBitsMatch = expectedParityBit ^ givenParityBit; // if they MATCH -> 0, if they DON'T MATCH -> 1
     int isValid = 1 ^ parityBitsMatch; 
+    // 1 => valid
+    // 0 => invalid
     printf("%d\n", isValid);
 
     return 0;

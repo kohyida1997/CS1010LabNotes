@@ -4,9 +4,9 @@
 int main() {
     
     /* Malicious code that corrupts the un-assigned variable "int i" and sets it to 1337*/
-    int x = 1337;
-    void *ptr = (void *) &x;
-    memcpy(ptr + 8, ptr, 4);
+    // int x = 1337;
+    // void *ptr = (void *) &x;
+    // memcpy(ptr + 8, ptr, 4);
 
     // Dangerous code, variables not initialized.
     int i;
