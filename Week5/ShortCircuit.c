@@ -3,12 +3,16 @@
 
 void noShortCircuit();
 void shortCircuit();
+void isThereShortCircuit();
 
 int main() {
 
     noShortCircuit();
     putchar('\n');
     shortCircuit();
+
+    isThereShortCircuit();
+
     return 0;
 
 }
@@ -62,5 +66,17 @@ void shortCircuit() {
     !testTrue && printf("False. I am not printed and assigned to \"foo\"\n");
 
     printf("\"foo\" is False and equals to %d\n", foo);
+
+}
+
+void isThereShortCircuit() {
+
+    int test = 1;
+
+    test || printf("Test 1: Am I printed?\n");
+
+    int test2 = 0;
+
+    test2 || printf("Test 2: Am I printed?\n");
 
 }
