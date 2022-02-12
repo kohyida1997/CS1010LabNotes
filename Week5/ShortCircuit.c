@@ -7,9 +7,9 @@ void isThereShortCircuit();
 
 int main() {
 
-    noShortCircuit();
+    //noShortCircuit();
     putchar('\n');
-    shortCircuit();
+    //shortCircuit();
 
     isThereShortCircuit();
 
