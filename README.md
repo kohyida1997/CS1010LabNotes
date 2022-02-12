@@ -6,3 +6,9 @@ during the Lab/Tutorial sessions each week.
 
 ## Running instructions
 The labs/tutorial codes are organized by week. Generally, simply navigate into the desired Week's folder and execute ```make all``` to build all the C source files.
+
+## Credits
+Thanks to the fellow TAs for their contribution of material:\
+Felix Halim\
+Adi Nata\
+Brendan
