@@ -36,7 +36,7 @@ Common mistakes:
     - Be very careful with the starting/ending index of for loops:
       > "for (int i = 0; i <= 3; i++)" <- this loop runs FOUR TIMES, i=0 ... i=3
       > "for (int i = 0; i < 3; i++)" <- this loop runs THREE times, i=0 ... i=2
-      > "for (int i = 1; i <=3; i++)" <- this loops runs THREE times, i=1 ... i=3
+      > "for (int i = 1; i <= 3; i++)" <- this loops runs THREE times, i=1 ... i=3
 
 2. Initialization of variables is very important.
     - If we want to find the MAX across all variables, we should initialize MAX to be a small number first!

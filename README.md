@@ -8,6 +8,8 @@ during the Lab/Tutorial sessions each week.
 The labs/tutorial codes are organized by week. Generally, simply navigate into the desired Week's folder and execute ```make all``` to build all the C source files.
 
 ## Credits
+Thank you to Prof Tan Sun Teck and NUS for the instruction of this module.\
+
 Thanks to the fellow TAs for their contribution of material:\
 Felix Halim\
 Adi Nata\

@@ -9,7 +9,7 @@ void print_suffix(int number) // change return type from int to void OR return s
     // Evaluate what to print based on the last and penultimate digit
     (last_digit == 1 && penultimate_digit != 1 && printf("st")) ||
     (last_digit == 2 && penultimate_digit != 1 && printf("nd")) || // last digit == 2, "nd" (2 marks)
-    (last_digit == 3 && penultimate_digit != 1 && printf("rd")) || // last digit == 3, "nd" (2 marks)
+    (last_digit == 3 && penultimate_digit != 1 && printf("rd")) || // last digit == 3, "rd" (2 marks)
     printf("th");
     printf("\n");
 }
