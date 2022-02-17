@@ -1,8 +1,5 @@
-
 #include <stdio.h>
-
 #include <stdbool.h>
-
 
 void printHorizontalBorder(int n) {
     int numToPrint = 9 + 8 * n;
@@ -47,8 +44,7 @@ void printBoard(int n) {
     printHorizontalBorder(n);
 }
 
-int main()
-{
+int main() {
     int n;
     scanf("%d", &n);
     printBoard(n);

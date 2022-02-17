@@ -31,6 +31,8 @@ int main() {
     int x, y;
     scanf("%d %d", &x, &y);
     // do isPrime checking for the range [x, y]
+    // [1, 100] -> [2, 100]
+    // [3, 99] -> [3, 99]
     for (int i = x <= 1 ? 2 : x; i <= y; i++)
     {
         if (isPrimeOptimized(i))
@@ -56,7 +58,7 @@ int main() {
     - Now suppose ( A > sqrt(X) ) AND ( B > sqrt(X) )
     - Then, A * B > sqrt(X) * B
     - Then, X > sqrt(X) * B
-    - Also, B * sqrt(X) > X
+    - Also, sqrt(X) * B > X
     - Combining the above two inequalities, X > sqrt(X) * B > X (by transitivity)
     - Then X > X (which is impossible)
     - (Proof by contradiction. Initial Assumption is False)
