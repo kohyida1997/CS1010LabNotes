@@ -11,11 +11,8 @@ void readIntoBuffer(int len, int* buff) {
 }
 
 /* 
-
     Checks if there is a delimiter starting from index "start" in the binary string payload.
-
     This is done by trying to match individual bits against the given delimiter, starting from index "start".
-
 */
 bool isDelimiterStartingHere(int stringLen, int* binaryString, int delimiterLen, int* delimiter, int start) {
     /* Index to move across the binary string payload. */
@@ -38,11 +35,9 @@ bool isDelimiterStartingHere(int stringLen, int* binaryString, int delimiterLen,
         delimPtr++;
     }
 
-    /* 
-    
+    /*     
         If we exit the while loop and manage to match ALL bits, then delimPtr's value will be equal to delimLen.
         This means that the substring starting from "start" actually does match the delimiter. So we return "true".
-    
     */
     if (delimPtr == delimiterLen) isDelimiter = true;
 
@@ -62,10 +57,8 @@ void getStartingPoints(int stringLen, int* binaryString, int delimiterLen, int* 
         /* Check if there is a delimiter starting from "i" */
         if (isDelimiterStartingHere(stringLen, binaryString, delimiterLen, delimiter, i)) {
             /* 
-            
                 If true, then we move pointer i to beyond the delimiter. 
-                (NOTE: We are guaranteed that no two limiters can be next to each other.)
-            
+                (NOTE: We are guaranteed that no two limiters can be next to each other.)        
             */
             i += delimiterLen;
 
@@ -83,8 +76,8 @@ int main() {
     int stringLen, delimiterLen;
     scanf("%d %d", &stringLen, &delimiterLen);
 
-    int delimiter[10];
-    int binaryString[100];
+    int delimiter[10]; // We allocate 10 because of question's constraints
+    int binaryString[100]; // We allocate 100 because of question's constraints
 
     readIntoBuffer(delimiterLen, delimiter);
     readIntoBuffer(stringLen, binaryString);
