@@ -10,17 +10,10 @@ typedef struct Student {
 void swap(int i, int j, Student* arr) {
 
     Student temp;
-    temp.id = arr[i].id;
-    temp.score = arr[i].score;
-
-    arr[i].id = arr[j].id;
-    arr[i].score = arr[j].score;
-
-    arr[j].id = temp.id;
-    arr[j].score = temp.score;
-
+    temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
 }
-
 
 int main() {
 
