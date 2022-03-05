@@ -14,7 +14,7 @@ void tracePointers1() {
 
     (*p)++; // Line 5 ----> we dereference p (go to the address), and increase the value at that address by 1. [i = 4] {same as doing i++}
 
-    *p = *p + i; // Line 6 ----> we set the value at address pointed to by p to be equals to (*p) + 1. i = i + i = 8. [i = 8] {same as doing i = i + i}
+    *p /* i */ = *p /* i */ + i; // Line 6 ----> we set the value at address pointed to by p to be equals to (*p) + 1. i = i + i = 8. [i = 8] {same as doing i = i + i}
 
     printf("Final value of i = %d\n", i);
 }
@@ -53,10 +53,18 @@ void tracePointers2() {
 
 }
 
+void jibberish() {
+    int x;
+    int k = 9;
+
+    printf("%d\n", x);
+}
+
 int main() {
 
-    tracePointers1();
-    tracePointers2();
+    //tracePointers1();
+    //tracePointers2();
+    jibberish();
 
     return 0;
 }

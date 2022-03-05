@@ -2,7 +2,6 @@
 #include "Utils.h"
 #define LENGTH 10
 
-
 void process(int[], int);
 
 int main(void) {
