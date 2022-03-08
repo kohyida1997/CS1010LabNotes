@@ -18,11 +18,11 @@ void swap(int i, int j, Student* arr) {
 int main() {
 
     Student students[6];
-    srand(time(NULL));
+    srand(time(NULL)); // don't worry about this, just initializing some randomness
 
     for (int i = 0; i < 6; i++) {
         students[i].id = i;
-        students[i].score = 100 - rand() % 100;
+        students[i].score = 100 - rand() % 100; // assign a random score to this student.
     }
 
     printf("== Unsorted Students ==\n");
@@ -34,7 +34,7 @@ int main() {
     for (int i = 0; i < 6; i++) {
         int minIdx = i;
         for (int j = i + 1; j < 6; j++) {
-            if (students[j].score < students[minIdx].score) {
+            if (students[j].score < students[minIdx].score) { // compare the students by their score. you can compare by other things too!
                 minIdx = j;
             }
         }
