@@ -7,6 +7,7 @@ typedef struct Student {
     int score;
 } Student;
 
+
 void swap(int i, int j, Student* arr) {
 
     Student temp;

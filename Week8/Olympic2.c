@@ -88,8 +88,6 @@ Original Indices:
 
 ------------------
 
-Sorted Elements:
-    [2, 4, 5, 7]
 
 Sorted (based on the elements) Indices:
     [3, 1, 0, 2]

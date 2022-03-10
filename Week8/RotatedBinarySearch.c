@@ -11,6 +11,10 @@ Binary search in a rotated array:
 
     [1, 2, 3, 4, 5]
 
+    [5, 1, 2, 3, 4]
+
+    [4, 5, 1, 2, 3]
+
 Case 1:
 
     [4, 5, 1, 2, 3]

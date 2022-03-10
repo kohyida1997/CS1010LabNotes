@@ -14,7 +14,7 @@ void generateFibo(int N, int fibo[]) { /* Function signature should take in fibo
 }
 
 void printFibo(int N, int fibo[]) { /* Again, function signature needs to take in fibo[] (an integer array) (1 mark) */ 
-    
+
     for (int i = N - 1; i >= 0; i--) { /* Iterate from the back of the array when printing. (1 mark)*/
         
         printf("%d ", fibo[i]);
