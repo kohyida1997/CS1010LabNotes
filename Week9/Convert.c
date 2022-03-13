@@ -40,7 +40,14 @@ int main() {
     for (int i = 0; i < r; i++) {
         int* rowPtr = elems + (i * c); /* Performing pointer arithmetic */
         for (int j = 0; j < c; j++) {
-            res[i][j] = rowPtr[j];
+            res[i][j] = rowPtr[j]; 
+            /* 
+            
+                res[i][j] = rowPtr[j] is essentially doing:
+
+                res[i][j] = *(rowPtr + j) 
+            
+            */
         }
     }
 
