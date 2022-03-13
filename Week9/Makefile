@@ -8,9 +8,9 @@ passing:
 	gcc -o ptr.o PassingPointer.c -Wall -lm
 
 all:
-	make pixel
-	make passing
-	make convert
+	gcc -o pix.o Pixel.c -Wall -lm
+	gcc -o ptr.o PassingPointer.c -Wall -lm
+	gcc -o conv.o Convert.c -Wall -lm
 
 clean:
 	rm *.o

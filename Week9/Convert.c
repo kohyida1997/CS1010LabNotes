@@ -33,12 +33,12 @@ int main() {
 
     /* Read dimensions of 2D array*/
     int r, c;
-    int res[100][100];
+    int res[100][100]; /* Static allocation, need to give max size. */
     scanf("%d %d", &r, &c);
 
     /* Populate */
     for (int i = 0; i < r; i++) {
-        int* rowPtr = elems + (i * c);
+        int* rowPtr = elems + (i * c); /* Performing pointer arithmetic */
         for (int j = 0; j < c; j++) {
             res[i][j] = rowPtr[j];
         }
