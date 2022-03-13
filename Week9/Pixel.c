@@ -9,7 +9,22 @@ void swap(int* x, int* y) {
     *y = temp;
 }
 
-void printSquareArray(int arr[MAXSIZE][MAXSIZE], int N) {
+/* 
+
+    Take note: When using 2D arrays, we NEED to supply the max sizes for at least the 2nd dimension
+    when declaring the function signature.
+
+    ie.
+
+    void printSquaryArray(int arr[][], int N) is NOT OK
+
+    void printSquareArray(int arr[][MAXSIZE], int N) is OK
+
+    void printSquareArray(int (*arr)[MAXSIZE], int N) is OK too
+
+*/
+
+void printSquareArray(int arr[][MAXSIZE], int N) {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             printf("%d ", arr[i][j]);
