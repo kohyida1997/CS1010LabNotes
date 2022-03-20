@@ -6,6 +6,15 @@
 
 #define MAX_LEN 100
 
+
+/* 
+
+    Reads a SINGLE LINE of input, and returns the length of the input read after changing terminating character to '\0' if necessary.
+
+    - Takes in a char* buffer to read into
+    - Assumes that the input line is not longer than the size allocated to the char* buffer
+
+*/
 int readInputAndReturnLength(char *buffer) { 
 
     // Take note we must use (MAX_LEN + 1) to account for null-character
