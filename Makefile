@@ -5,3 +5,4 @@ all:
 	cd Week7 && $(MAKE) all
 	cd Week8 && $(MAKE) all
 	cd Week9 && $(MAKE) all
+	cd Week10 && $(MAKE) all
