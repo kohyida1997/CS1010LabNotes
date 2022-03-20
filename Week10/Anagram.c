@@ -11,8 +11,11 @@
 
     Reads a SINGLE LINE of input, and returns the length of the input read after changing terminating character to '\0' if necessary.
 
+    Take note:
+
     - Takes in a char* buffer to read into
     - Assumes that the input line is not longer than the size allocated to the char* buffer
+    - Need to define the MAX_LEN macro before using this function
 
 */
 int readInputAndReturnLength(char *buffer) { 
