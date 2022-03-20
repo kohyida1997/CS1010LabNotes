@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h> // for abs()
 #include <ctype.h> // Need this for isalpha() and tolower() functions
 #include <stdlib.h>
 #include <string.h> // Need this for strlen()
 
 #define MAX_LEN 100
-
 
 /* 
 
@@ -34,10 +34,9 @@ int readInputAndReturnLength(char *buffer) {
 
     int length = strlen(buffer);
 
-    buffer[length - 1] = buffer[length - 1] == '\n' ? '\0' : buffer[length - 1];
-
+    char last = buffer[length - 1];
+    buffer[length - 1] = last == '\n' ? '\0' : last;
     length = strlen(buffer);
-
     return length;
 
 }
@@ -45,40 +44,29 @@ int readInputAndReturnLength(char *buffer) {
 
 int main() {
     
+    char equation[MAX_LEN + 1];
 
-    char string1[MAX_LEN] = {'\0'};
-    char string2[MAX_LEN] = {'\0'};
+    int numLeftParenthesisToAdd = 0;
+    int numRightParenthesisToAdd = 0;
+    char leftParen = '(';
+    char rightParen = ')';
 
-    int str1Length = readInputAndReturnLength(string1);
-    int str2Length = readInputAndReturnLength(string2);
+    // Edge case is "1) + (2" 
 
-    int table[26] = {0};
-    char lowerCaseLetterA = 'a';
+    int len = readInputAndReturnLength(equation);
 
-    /* Go through first string and populate table. */
-    for (int i = 0; i < str1Length; i++) {
-        char current = string1[i];
-        if (isalpha(current)) {
-            table[tolower(current) - lowerCaseLetterA]++;
+    for (int i = 0; i < len; i++) {
+        char current = equation[i];
+
+        if (current == leftParen) {
+            numRightParenthesisToAdd++;
+        }
+
+        if (current == rightParen) {
+            if (numRightParenthesisToAdd <= 0) numLeftParenthesisToAdd++;
+            else numRightParenthesisToAdd--;
         }
     }
-
-    /* Go through second string and subtract from each index in table. */
-    for (int i = 0; i < str2Length; i++) {
-        char current = string2[i];
-        if (isalpha(current)) {
-            table[tolower(current) - lowerCaseLetterA]--;
-        }
-    }
-
-    /* Now check if everything is back to zero. */
-    for (int i = 0; i < 26; i++) {
-        if (table[i] != 0) {
-            printf("0\n");
-            return 0;
-        }
-    }
-
-    printf("1\n");
+    printf("%d\n", numRightParenthesisToAdd + numLeftParenthesisToAdd);
     return 0;
 }
