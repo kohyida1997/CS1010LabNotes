@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include <math.h> // for abs()
 #include <ctype.h> // Need this for isalpha() and tolower() functions
-#include <stdlib.h>
+#include <stdlib.h> // for atoi()
 #include <string.h> // Need this for strlen()
 
 #define MAX_LEN 100
@@ -44,7 +44,7 @@ int readInputAndReturnLength(char *buffer) {
 
 int main() {
     
-    char equation[MAX_LEN + 1];
+    char equation[MAX_LEN + 1] = {'\0'}; // Always good to initialize with nulls
 
     int numLeftParenthesisToAdd = 0;
     int numRightParenthesisToAdd = 0;

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <ctype.h> // Need this for isalpha() and tolower() functions
-#include <stdlib.h>
+#include <stdlib.h> // for atoi()
 #include <string.h> // Need this for strlen()
 
 #define MAX_LEN 100
@@ -30,6 +30,8 @@ int readInputAndReturnLength(char *buffer) {
     It reads a line from the specified stream and stores it into the string pointed to by str.
     It stops when either (n-1) characters are read, the newline character is read, or the end-of-file is reached, whichever comes first.
     
+    Note: it will actually also read the newline if the buffer is large enough.
+    
     */
 
     int length = strlen(buffer);
@@ -45,9 +47,9 @@ int readInputAndReturnLength(char *buffer) {
 
 int main() {
     
-
-    char string1[MAX_LEN] = {'\0'};
-    char string2[MAX_LEN] = {'\0'};
+    // Always good to initialize with nulls
+    char string1[MAX_LEN + 1] = {'\0'};
+    char string2[MAX_LEN + 1] = {'\0'};
 
     int str1Length = readInputAndReturnLength(string1);
     int str2Length = readInputAndReturnLength(string2);
