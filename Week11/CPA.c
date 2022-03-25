@@ -94,8 +94,8 @@ bool oneOrManyToOneMapping(char* mapLower, char* mapUpper, char* plainText, char
         char offset = islower(currentPlain) ? LOWERCASE_A : UPPERCASE_A;
 
         // first check if it is 1-to-1
-        if (mapToCheck[currentPlain - offset] != '\0') {
-            if (mapToCheck[currentPlain - offset] != currentCipher) return false;
+        if (mapToCheck[currentPlain - offset] != '\0') { // There already exists a mapping
+            if (mapToCheck[currentPlain - offset] != currentCipher) return false; // If the mapping isn't the same, return
         }
 
         mapToCheck[currentPlain - offset] = currentCipher;

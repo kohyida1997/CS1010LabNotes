@@ -4,6 +4,18 @@
 
 #define MAX_LEN 100
 
+/* 
+
+    Modulo has an inherent cyclical nature to it:
+
+    0 % 5 = 0       5 % 5 = 0 
+    1 % 5 = 1       6 % 5 = 1
+    2 % 5 = 2       7 % 5 = 2
+    3 % 5 = 3       8 % 5 = 3
+    4 % 5 = 4       9 % 5 = 4
+
+*/
+
 int readAndGetLength(char *input) {
     fgets(input, MAX_LEN + 1, stdin);
     int len = strlen(input);

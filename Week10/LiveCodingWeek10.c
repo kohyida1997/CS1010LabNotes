@@ -19,7 +19,7 @@ int look_and_say(int n) {
       factor *= 100; /* Multiply factor by 100 (1 mark) */
 
     }
-    
+
     return say;
 }
 
