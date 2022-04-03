@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 int cashback(int X, int A, int B, int times) {
 
     if (times == 1) {
