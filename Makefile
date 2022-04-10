@@ -8,6 +8,7 @@ all:
 	cd Week10 && $(MAKE) all
 	cd Week11 && $(MAKE) all
 	cd Week12 && $(MAKE) all
+	cd Week13 && $(MAKE) all
 
 clean:
 	cd Week4 && rm *.o
@@ -19,3 +20,4 @@ clean:
 	cd Week10 && rm *.o
 	cd Week11 && rm *.o
 	cd Week12 && rm *.o		
+	cd Week13 && rm *.o

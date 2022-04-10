@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int cashback(int X, int A, int B, int times) {
+int cashback(int L, int A, int B, int times) {
 
     if (times == 1) {
-        return X * A + B;
+        return L * A + B;
     }
 
-    return cashback(X, A, B, times - 1) * A + B;
+    return cashback(L, A, B, times - 1) * A + B;
 
 }
 
